@@ -1,0 +1,9 @@
+# Fins de ligne : LF obligatoire pour les scripts shell et python,
+# afin qu'ils restent exécutables tels quels sur le VPS Linux.
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text
+*.csv text

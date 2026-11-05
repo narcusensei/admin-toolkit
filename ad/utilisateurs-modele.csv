@@ -1,0 +1,4 @@
+﻿Prenom;Nom;SamAccountName;Departement;Fonction;OU;Email;MotDePasse
+Amelie;Durand;;Comptabilite;Comptable;;amelie.durand@exemple.fr;
+Jean;Dupont;jdupont;Informatique;Technicien support;;;MotDePasseEphemere!42
+Élise;Bernard;;;;;;

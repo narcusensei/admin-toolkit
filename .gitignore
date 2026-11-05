@@ -1,0 +1,17 @@
+# Rapports de création AD — CONTIENNENT LES MOTS DE PASSE TEMPORAIRES
+ad/rapport-creation-*.csv
+
+# Configuration locale du contrôle de santé (webhooks, cibles réelles)
+sante/healthcheck.json
+
+# Logs et états d'alerte
+sante/logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Divers
+.DS_Store
+Thumbs.db

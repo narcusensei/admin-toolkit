@@ -1,0 +1,41 @@
+{
+    "_commentaires": {
+        "log_file": "Chemin du log dédié (relatif = à côté de ce fichier). Rotation automatique.",
+        "alert_repeat_hours": "Rappel webhook toutes les N heures tant qu'une anomalie persiste.",
+        "webhook.url": "Webhook entrant Slack / Discord / Teams. Vide = alertes en log uniquement.",
+        "http.keyword": "Si renseigné, le mot-clé doit être présent dans la page (sinon alerte).",
+        "certificates": "warn_days = avertissement, crit_days = alerte critique avant expiration.",
+        "disks.path": "Point de montage Linux ('/') ou chemin Windows ('C:/' ou 'D:\\\\').",
+        "services": "systemd (Linux) ou service Windows (via sc)."
+    },
+
+    "log_file": "logs/healthcheck.log",
+    "alert_repeat_hours": 24,
+
+    "webhook": {
+        "url": "",
+        "timeout": 10
+    },
+
+    "http": [
+        { "name": "Site vitrine",  "url": "https://www.exemple.fr", "expected_status": 200, "timeout": 10, "warn_ms": 2000 },
+        { "name": "API santé bot", "url": "https://bot.exemple.fr/health", "expected_status": 200, "timeout": 5, "keyword": "ok" }
+    ],
+
+    "tcp": [
+        { "name": "SSH", "host": "127.0.0.1", "port": 22, "timeout": 5 }
+    ],
+
+    "certificates": [
+        { "name": "Cert exemple.fr", "host": "www.exemple.fr", "port": 443, "warn_days": 30, "crit_days": 7, "timeout": 10 }
+    ],
+
+    "disks": [
+        { "path": "/", "warn_percent": 80, "crit_percent": 90 }
+    ],
+
+    "services": [
+        { "name": "sshd" },
+        { "name": "nginx" }
+    ]
+}
