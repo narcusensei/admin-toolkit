@@ -53,7 +53,8 @@ Le changement de mot de passe est **forcé à la première ouverture de session*
 séparateur `,` ou `;` détecté automatiquement, encodage **UTF-8** recommandé.
 
 **Rapport** : `rapport-creation-<date>.csv` listant créés / ignorés / échecs +
-mots de passe temporaires. ⚠️  À transmettre par un canal sûr puis à supprimer.
+mots de passe temporaires. ⚠️
+À transmettre par un canal sûr puis à supprimer.
 
 Codes retour : `0` = OK · `2` = au moins un échec.
 
